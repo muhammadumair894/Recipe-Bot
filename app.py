@@ -21,7 +21,7 @@ with st.sidebar:
 # Generate empty lists for generated and past.
 ## generated stores AI generated responses
 if 'generated' not in st.session_state:
-    st.session_state['generated'] = ["How may I help you?"]
+    st.session_state['generated'] = ["Please fill the following questions."]
 ## past stores User's questions
 if 'past' not in st.session_state:
     st.session_state['past'] = ['Hi!']
@@ -34,7 +34,7 @@ response_container = st.container()
 # User input
 ## Function for taking user provided prompt as input
 def get_text():
-    input_text = st.text_input("Enter generate Diet plan ", "", key="input")
+    input_text = st.text_input("Enter in textbox after filling the questions (Generate Diet plan) ", "", key="input")
     return input_text
 
 # Questionnaire
