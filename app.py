@@ -58,7 +58,7 @@ with input_container:
 # Response output
 ## Function for taking user prompt as input followed by producing AI generated responses
 def generate_response(prompt):
-    #openai.api_key = "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"
+    #openai.api_key = "sk"
     openai.api_key = openAPIkey
     role = f"""
      Act as if you are a registered dietitian who specializes in nutrition for fertility. 
