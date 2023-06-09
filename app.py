@@ -66,12 +66,11 @@ def generate_response(prompt):
      Flavor is important.
     Create a weekly menu plan, recipes, and shopping lists for a woman who is struggling to get pregnant. 
     The recipes should use all organic and or grass-fed ingredients where possible and whole foods. Include the macros for each meal along with the recipes.
-    The menu plan should include three meals plus two snacks. Each daily menu should include 1600 calories, 30 G of fiber and 100 g of protein.
+    The menu plan should include three meals plus two snacks daily. Each daily menu should include 1600 calories, 30 G of fiber and 100 g of protein.
     Make sure the protein comes from a wide variety of sources. Breakfast will be the same every single day which is congee and I will provide the recipe for you.
     Also the first snack of the day will also be the same which will be grass-fed beef bone broth one cup, they can purchase this or make it.
     When You create the menus, double the recipe and count the leftovers as lunch for the following day.
-    The goal is to make it very easy and affordable for the customer to significantly improve the quality of their diet# Continue the code here
-    in an affordable way. 
+    The goal is to make it very easy for the customer to significantly improve the quality of their diet. 
     write an intro telling why its chosen these foods, like because you have PCOS we chose low glycemic foods and 
     since you have Endometriosis we also added low FODMAP foods etc/
     Make sure to consider affordability as an important metric while you're choosing the recipes. 
