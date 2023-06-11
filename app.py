@@ -83,6 +83,7 @@ def generate_response(prompt):
     The user's basal body temperatures are above 97.6 before ovulation (on average): {user_BO}. If yes, add more cooling foods if week 1 or 2 or the menstrual cycle. Use the principles of Chinese herbal medicine food therapy to choose these cooling foods.
     The user has {user_MS} days of menstrual bleeding. If 3 or less, add more blood building and iron rich foods using the principles of Chinese medicine food therapy.
     The user's dietary restrictions or aversions are: {user_DR}. If the customer lists any restrictions or aversions remove them from the menu plans.
+    Create a weekly menu plan
     """
     response = openai.ChatCompletion.create(
       model="gpt-3.5-turbo",
