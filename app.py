@@ -42,12 +42,12 @@ with st.form(key='questionnaire'):
     user_AGE = st.text_input("What is your age?")
     user_TP = st.text_input("How long have you been trying to get pregnant?")
     user_MW = st.text_input("What week of your menstrual cycle will this be for?")
-    user_PI = st.text_input("Do you have PCOS/Insulin resistance?")
-    user_E = st.text_input("Do you have Endometriosis?")
-    user_H = st.text_input("Do have Hasimotos?")
-    user_AO = st.text_input("Do your basal body temperatures stay above 98 after ovulation?")
-    user_BO = st.text_input("Are your basal body temperatures above 97.6 before ovulation (on average)?")
-    user_MS = st.text_input("How many days of menstrual bleeding do you have?")
+    user_PI = st.text_input("Do you have PCOS/Insulin resistance? (Yes/No)")
+    user_E = st.text_input("Do you have Endometriosis? (Yes/No)")
+    user_H = st.text_input("Do have Hasimotos? (Yes/No)")
+    user_AO = st.text_input("Do your basal body temperatures stay above 98 after ovulation? (Yes/No)")
+    user_BO = st.text_input("Are your basal body temperatures above 97.6 before ovulation (on average)? (Yes/No)")
+    user_MS = st.text_input("How many days of menstrual bleeding do you have? (3 or less, 4, more than 4)")
     user_DR = st.text_input("Do you have any dietary restrictions or aversions?")
     submit_button = st.form_submit_button(label='Submit')
 
@@ -76,13 +76,13 @@ def generate_response(prompt):
     Make sure to consider affordability as an important metric while you're choosing the recipes. 
     The user is {user_AGE} years old and has been trying to get pregnant for {user_TP}.
     The user is in week {user_MW} of their menstrual cycle.
-    The user has PCOS/Insulin resistance: {user_PI}.
-    The user has Endometriosis: {user_E}.
-    The user has Hasimotos: {user_H}.
-    The user's basal body temperatures stay above 98 after ovulation: {user_AO}.
-    The user's basal body temperatures are above 97.6 before ovulation (on average): {user_BO}.
-    The user has {user_MS} days of menstrual bleeding.
-    The user's dietary restrictions or aversions are: {user_DR}.
+    The user has PCOS/Insulin resistance: {user_PI}. if yes, add to prompt make all recipes have a low glycemic index
+    The user has Endometriosis: {user_E}. If yes, make all recipes low fodmap.
+    The user has Hasimotos: {user_H}. If yes, make all recipes low fodmap.
+    The user's basal body temperatures stay above 98 after ovulation: {user_AO}. If no, add more warming foods if week 3 or 4 or the menstrual cycle. use the principals of Chinese herbal medicine food therapy to choose these warming foods.
+    The user's basal body temperatures are above 97.6 before ovulation (on average): {user_BO}. If yes, add more cooling foods if week 1 or 2 or the menstrual cycle. Use the principles of Chinese herbal medicine food therapy to choose these cooling foods.
+    The user has {user_MS} days of menstrual bleeding. If 3 or less, add more blood building and iron rich foods using the principles of Chinese medicine food therapy.
+    The user's dietary restrictions or aversions are: {user_DR}. If the customer lists any restrictions or aversions remove them from the menu plans.
     """
     response = openai.ChatCompletion.create(
       model="gpt-3.5-turbo",
