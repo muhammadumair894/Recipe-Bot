@@ -71,8 +71,7 @@ def generate_response(prompt):
     Also the first snack of the day will also be the same which will be grass-fed beef bone broth one cup, they can purchase this or make it.
     When You create the menus, double the recipe and count the leftovers as lunch for the following day.
     The goal is to make it very easy for the customer to significantly improve the quality of their diet. 
-    write an intro telling why its chosen these foods, like because you have PCOS we chose low glycemic foods and 
-    since you have Endometriosis we also added low FODMAP foods etc/
+    
     Make sure to consider affordability as an important metric while you're choosing the recipes. 
     The user is {user_AGE} years old and has been trying to get pregnant for {user_TP}.
     The user is in week {user_MW} of their menstrual cycle.
@@ -84,6 +83,8 @@ def generate_response(prompt):
     The user has {user_MS} days of menstrual bleeding. If 3 or less, add more blood building and iron rich foods using the principles of Chinese medicine food therapy.
     The user's dietary restrictions or aversions are: {user_DR}. If the customer lists any restrictions or aversions remove them from the menu plans.
     Create a weekly menu plan
+    write an intro telling why its chosen these foods, like because you have PCOS we chose low glycemic foods and 
+    since you have Endometriosis we also added low FODMAP foods etc/
     """
     response = openai.ChatCompletion.create(
       model="gpt-3.5-turbo",
